@@ -1,7 +1,6 @@
 package com.demo.exportbigdata.controller;
 
-import com.demo.exportbigdata.util.ExportService;
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import com.demo.exportbigdata.service.ExportService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,6 +28,17 @@ public class ExportController {
     @GetMapping("/test")
     public String test() {
         return "测试导出";
+    }
+
+    @GetMapping("/easyExcel")
+    public String easyExcelExport() {
+        try {
+            exportService.easyExcel(response);
+            return "导出成功";
+        } catch (Exception e) {
+            e.printStackTrace();
+            return "导出失败";
+        }
     }
 
     /**
