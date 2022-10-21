@@ -56,5 +56,20 @@ public class ExportController {
         }
     }
 
+    /**
+     * 测试 poi2(SXSSFWorkbook) 导出
+     * @return
+     */
+    @GetMapping("/poi2")
+    public String poiExport2() {
+        try {
+            String titles[] = {"序号", "商户订单编号", "商户号", "商户名称", "门店编号", "门店名称", "平台名称", "购买人姓名", "购买人身份证", "收货人姓名", "收货人地址"};
+            return exportService.poiExport2(response, titles);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return "导出失败";
+        }
+    }
+
 
 }
