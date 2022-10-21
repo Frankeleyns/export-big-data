@@ -1,5 +1,5 @@
 # export-big-data
-本项目用于研究不同导出方案的性能情况。
+
 
 
 
@@ -7,11 +7,11 @@
 
 ​		现在企业的互联网项目中，导出数据是一个非常基本的需求，而随着业务的扩展，大数据量的导出更是常态，为了满足该需求开始比较一些导出方案：
 
-​		① POI 导出
+​		① POI-HSSFWorkbook 导出
 
-​		② EasyExcel 导出
+​		② POI-SXSSFWorkbook 导出
 
-​		③ Hutool 导出
+​		③ EasyExcel 导出
 
 
 
